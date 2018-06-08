@@ -1,4 +1,6 @@
-# python2
+# python3
+
+import sys
 
 class Bracket:
     def __init__(self, bracket_type, position):
@@ -15,8 +17,8 @@ class Bracket:
         return False
 
 if __name__ == "__main__":
-    text = raw_input()
-    error_pos = 0
+    text = sys.stdin.read()
+
     opening_brackets_stack = []
     for i, next in enumerate(text):
         if next == '(' or next == '[' or next == '{':
